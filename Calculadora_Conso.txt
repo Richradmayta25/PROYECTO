@@ -1,0 +1,61 @@
+sw=True
+menu=\
+    '''\t*****************
+    ***CALCULADORA***
+    *****************'''
+print(menu)
+#funcion sumar
+def sumar_num():
+    print('\t===SUMA===')
+    num1=int(input('DIGITE EL PRIMER NUMERO '))
+    num2=int(input('DIGITE EL SEGUNDO NUMERO '))
+    resultado= num1 + num2
+    print(f'LA SUMA ES: ',  resultado)
+#RESTA
+def restar_num():
+    print('\t===RESTA===')
+    num1 = int(input('DIGITE EL PRIMER NUMERO '))
+    num2 = int(input('DIGITE EL SEGUNDO NUMERO '))
+    resultado = num1 - num2
+    print(f'LA RESTA ES: ', resultado)
+#MULTIPLICACION
+def multiplica_num():
+    print('\t===MULTIPLICACION===')
+    num1 = int(input('DIGITE EL PRIMER NUMERO '))
+    num2 = int(input('DIGITE EL SEGUNDO NUMERO '))
+    resultado = num1 * num2
+    print(f'LA MULTIPLICACION ES: ', resultado)
+#DIVISION
+def div_num():
+    print('\t===DIVISION===')
+    num1 = int(input('DIGITE EL PRIMER NUMERO '))
+    num2 = int(input('DIGITE EL SEGUNDO NUMERO '))
+    resultado = num1 / num2
+    print(f'LA DIVISION ES: ', resultado)
+#SALIR
+def fin():
+    print('*** FIN DEL PROGRAMA ***')
+    global sw
+    sw=False
+
+while sw:
+    menu2=\
+    '''\t ***MENU***
+    1. SUMAR
+    2. RESTAR
+    3. MULTIPLICAR
+    4. DIVIDIR
+    5. SALIR
+    '''
+    print(menu2)
+    opcion=int(input('QUE DESEA REALIZAR: '))
+    if opcion==1:
+        sumar_num()
+    elif opcion==2:
+        restar_num()
+    elif opcion==3:
+        multiplica_num()
+    elif opcion==4:
+        div_num()
+    elif opcion==5:
+        fin()
